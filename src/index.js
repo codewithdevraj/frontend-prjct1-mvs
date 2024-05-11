@@ -1,11 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+import { Navbar, Sidebar } from "./components/template";
+
+
+function pagesetup() {
+  const nav = ReactDOM.createRoot(document.getElementById("nav"));
+  nav.render(
+    <React.StrictMode>
+      <Navbar />
+    </React.StrictMode>
+  );
+
+  const sidebar = ReactDOM.createRoot(document.getElementById("sidebar"));
+  sidebar.render(
+    <React.StrictMode>
+      <Sidebar />
+    </React.StrictMode>
+  );
+}
+pagesetup();
+const main = ReactDOM.createRoot(document.getElementById('main'));
+main.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
