@@ -87,7 +87,7 @@ const Sidebar = () => {
       </div>
       <hr />
       <div className="alinks">
-        <h2>Categories</h2>
+        <h2>Genre</h2>
         <a href="/movies/genre/action">Action</a>
         <a href="/movies/genre/adventure">Adventure</a>
         <a href="/movies/genre/comedy">Comedy</a>
