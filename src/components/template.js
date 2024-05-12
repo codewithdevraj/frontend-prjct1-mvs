@@ -75,53 +75,27 @@ const Sidebar = () => {
   return (
     <aside className={`${issideOpen ? "show" : ""}`}>
       <div className="atp">
-        <img src="/hero-egame.jpg" alt="" />
-        <h5>Get all movies here</h5>
+        <h2>Movie Mania</h2>
+        <h5>Get all your favourites at one place</h5>
       </div>
       <hr />
-      <div className="trend">
+      <div className="trend alinks">
         <h2>Movies 4 U</h2>
-        <ul>
-          <li>
-            <a href="/movies/category/trending">Trending</a>
-          </li>
-          <li>
-            <a href="/movies/category/popular">Popular</a>
-          </li>
-          <li>
-            <a href="/movies/category/new">New Release</a>
-          </li>
-        </ul>
+        <a href="/movies/category/trending">Trending</a>
+        <a href="/movies/category/popular">Popular</a>
+        <a href="/movies/category/new">New Release</a>
       </div>
       <hr />
       <div className="alinks">
-        <ul>
-          <h2>Categories</h2>
-          <li>
-            <a href="/movies/genre/action">Action</a>
-          </li>
-          <li>
-            <a href="/movies/genre/adventure">Adventure</a>
-          </li>
-          <li>
-            <a href="/movies/genre/comedy">Comedy</a>
-          </li>
-          <li>
-            <a href="/movies/genre/drama">Drama</a>
-          </li>
-          <li>
-            <a href="/movies/genre/horror">Horror</a>
-          </li>
-          <li>
-            <a href="/movies/genre/romance">Romance</a>
-          </li>
-          <li>
-            <a href="/movies/genre/scifi">Sci-Fi</a>
-          </li>
-          <li>
-            <a href="/movies/genre/thriller">Thriller</a>
-          </li>
-        </ul>
+        <h2>Categories</h2>
+        <a href="/movies/genre/action">Action</a>
+        <a href="/movies/genre/adventure">Adventure</a>
+        <a href="/movies/genre/comedy">Comedy</a>
+        <a href="/movies/genre/drama">Drama</a>
+        <a href="/movies/genre/horror">Horror</a>
+        <a href="/movies/genre/romance">Romance</a>
+        <a href="/movies/genre/scifi">Sci-Fi</a>
+        <a href="/movies/genre/thriller">Thriller</a>
       </div>
       <hr />
       <div className="afooter">
