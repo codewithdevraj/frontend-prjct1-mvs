@@ -168,7 +168,6 @@ button {
 
 main {
   padding: 100px 10px 20px 220px;
-  min-height: 400vh;
   background: linear-gradient(rgb(35, 1, 29), rgb(44, 1, 2));
 }
 

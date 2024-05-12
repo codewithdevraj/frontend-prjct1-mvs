@@ -207,6 +207,9 @@ const Homepage = () => {
         </div>
       </div>
       <div className="slider-container" id="slidercontainer">
+        <h2>
+          <span>Now</span> Showing
+        </h2>
         <div className="slider" id="slider">
           <div className="slide">
             <img
@@ -236,29 +239,37 @@ const Homepage = () => {
       </div>
       <div className="mcard-cont">
         <div className="mdata">
-          <h2>Popular Movies</h2>
+          <h2>
+            <span>Popular</span> Movies
+          </h2>
+          <p>
+            Rating more than <span>8.5</span>
+          </p>
         </div>
         <div className="mcards">
-          {mdata.map((m, i) => (
-            <Link key={i} to={m.link} className="mcard-link">
-              <div className="mcard">
-                <img src={m.imageUrl} alt="" />
-                <div className="mcard-info">
-                  <div>
-                    <h3>{m.movieTitle}</h3>
-                    <a href={m.link}>
-                      Watch
-                      <br />
-                      Now
-                    </a>{" "}
-                    {/* Link added here */}
-                    <p>{m.description}</p>
-                    <h5>Rating: {m.rating} ★★★★★</h5>
+          {mdata
+            .filter((m) => m.rating > 8.5)
+            .slice(0, 12)
+            .map((m, i) => (
+              <Link key={i} to={m.link} className="mcard-link">
+                <div className="mcard">
+                  <img src={m.imageUrl} alt="" />
+                  <div className="mcard-info">
+                    <div>
+                      <h3>{m.movieTitle}</h3>
+                      <a href={m.link}>
+                        Watch
+                        <br />
+                        Now
+                      </a>{" "}
+                      {/* Link added here */}
+                      <p>{m.description}</p>
+                      <h5>Rating: {m.rating} ★★★★★</h5>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
 
           <div className="mcard2">
             <div className="mcard2-info">
