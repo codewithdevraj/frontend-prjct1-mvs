@@ -180,7 +180,7 @@ main {
     display: none;
     opacity: 0;
     position: absolute;
-    top: 80px;
+    top: 50px;
     width: 100%;
     background-color: var(--tertiary-color);
     border-radius: 0 0 10px 10px;
@@ -277,17 +277,20 @@ hr {
 }
 
 @media screen and (max-width: 900px) {
+  .nav{
+    padding: 0.3rem 0;
+    img{
+      width: 40px !important;
+      height: 40px !important;
+    
+    }
+  }
   aside {
     position: relative;
-    padding-top: 85px;
+    padding-top: 55px;
     width: 100%;
-    height: 150px;
-    top: 0;
-    left: 0;
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    flex-wrap: wrap;
+    height: 95px;
+    border: 0;
     flex-direction: column;
     .atp {
       text-align: center;
@@ -299,7 +302,15 @@ hr {
       color: var(--tertiary-color);
       font-size: 1.2rem;
       text-align: center;
-      margin: 10px 0 25px 0;
+      max-width: 200px;
+      margin: 0 auto;
+      /* firstchild */
+      &:first-child{
+        background-color: transparent;
+        box-shadow: none;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
     }
     .afooter {
       p {
@@ -314,8 +325,8 @@ hr {
     }
     i {
       position: absolute;
-      top: 90px;
-      right: 30px;
+      top: 50px;
+      right: 20px;
     }
   }
   aside.show {
