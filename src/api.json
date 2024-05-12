@@ -1,0 +1,202 @@
+[
+  {
+    "movieName": "shawshank_redemption",
+    "movieTitle": "The Shawshank Redemption",
+    "actors": ["Tim Robbins", "Morgan Freeman"],
+    "genre": "Drama",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://vegamovies.yt/wp-content/uploads/2020/11/The-Shawshank-Redemption-165x248.jpg",
+    "rating": 9.3,
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+  },
+  {
+    "movieName": "godfather",
+    "movieTitle": "The Godfather",
+    "actors": ["Marlon Brando", "Al Pacino", "James Caan"],
+    "genre": "Crime",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UY1982_.jpg",
+    "rating": 9.2,
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+  },
+  {
+    "movieName": "dark_knight",
+    "movieTitle": "The Dark Knight",
+    "actors": ["Christian Bale", "Heath Ledger", "Aaron Eckhart"],
+    "genre": "Action",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_FMjpg_UY2048_.jpg",
+    "rating": 9.0,
+    "description": "When the menace known as The Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham."
+  },
+  {
+    "movieName": "pulp_fiction",
+    "movieTitle": "Pulp Fiction",
+    "link": "iamdevraj.me",
+    "actors": ["John Travolta", "Uma Thurman", "Samuel L. Jackson"],
+    "genre": "Crime",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR3,0,380,562_.jpg",
+    "rating": 8.9,
+    "description": "The lives of two mob hitmen, a boxer, a gangster's wife, and a pair of diner bandits intertwine in four tales of violence and redemption."
+  },
+  {
+    "movieName": "schindlers_list",
+    "movieTitle": "Schindler's List",
+    "link": "iamdevraj.me",
+    "actors": ["Liam Neeson", "Ben Kingsley", "Ralph Fiennes"],
+    "genre": "Biography",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "rating": 8.9,
+    "description": "In German-occupied Poland during World War II, Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazi Germans."
+  },
+  {
+    "movieName": "fight_club",
+    "movieTitle": "Fight Club",
+    "link": "iamdevraj.me",
+    "actors": ["Brad Pitt", "Edward Norton", "Helena Bonham Carter"],
+    "genre": "Drama",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "rating": 8.8,
+    "description": "An insomniac office worker and a devil-may-care soapmaker form an underground fight club that evolves into something much, much more."
+  },
+  {
+    "movieName": "forrest_gump",
+    "link": "iamdevraj.me",
+    "movieTitle": "Forrest Gump",
+    "actors": ["Tom Hanks", "Robin Wright", "Gary Sinise"],
+    "genre": "Drama",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNWIwODRlZTUtY2U3ZS00Yzg1LWJhNzYtMmZiYmEyNmU1NjMzXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_QL75_UY562_CR4,0,380,562_.jpg",
+    "rating": 8.8,
+    "description": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart."
+  },
+  {
+    "link": "iamdevraj.me",
+    "movieName": "matrix",
+    "movieTitle": "The Matrix",
+    "actors": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"],
+    "genre": "Action",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "rating": 8.7,
+    "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers."
+  },
+  {
+    "movieName": "goodfellas",
+    "link": "iamdevraj.me",
+    "movieTitle": "Goodfellas",
+    "actors": ["Robert De Niro", "Ray Liotta", "Joe Pesci"],
+    "genre": "Biography",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,3,380,562_.jpg",
+    "rating": 8.7,
+    "description": "The story of Henry Hill and his life in the mob, covering his relationship with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito in the Italian-American crime syndicate."
+  },
+  {
+    "movieName": "return_of_the_king",
+    "link": "iamdevraj.me",
+    "movieTitle": "The Lord of the Rings: The Return of the King",
+    "actors": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
+    "genre": "Fantasy",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "rating": 8.9,
+    "description": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring."
+  },
+  {
+    "movieName": "godfather_part_2",
+    "link": "iamdevraj.me",
+    "movieTitle": "The Godfather: Part II",
+    "actors": ["Al Pacino", "Robert De Niro", "Robert Duvall"],
+    "genre": "Crime",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UY562_CR7,0,380,562_.jpg",
+    "rating": 9.0,
+    "description": "The early life and career of Vito Corleone in 1920s New York City is portrayed, while his son, Michael, expands and tightens his grip on the family crime syndicate."
+  },
+  {
+    "movieName": "fellowship_of_the_ring",
+    "movieTitle": "The Lord of the Rings: The Fellowship of the Ring",
+    "link": "iamdevraj.me",
+    "actors": ["Elijah Wood", "Ian McKellen", "Orlando Bloom"],
+    "genre": "Fantasy",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+    "rating": 8.8,
+    "description": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron."
+  },
+  {
+    "movieName": "two_towers",
+    "movieTitle": "The Lord of the Rings: The Two Towers",
+    "actors": ["Elijah Wood", "Viggo Mortensen", "Ian McKellen"],
+    "genre": "Fantasy",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZGMxZTdjZmYtMmE2Ni00ZTdkLWI5NTgtNjlmMjBiNzU2MmI5XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,14,380,562_.jpg",
+    "rating": 8.7,
+    "description": "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard."
+  },
+  {
+    "movieName": "se7en",
+    "movieTitle": "Se7en",
+    "actors": ["Morgan Freeman", "Brad Pitt", "Kevin Spacey"],
+    "link": "iamdevraj.me",
+    "genre": "Crime",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BOTUwODM5MTctZjczMi00OTk4LTg3NWUtNmVhMTAzNTNjYjcyXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UX380_CR0,16,380,562_.jpg",
+    "rating": 8.6,
+    "description": "Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives."
+  },
+  {
+    "movieName": "inglourious_basterds",
+    "movieTitle": "Inglourious Basterds",
+    "actors": ["Brad Pitt", "Diane Kruger", "Eli Roth"],
+    "link": "iamdevraj.me",
+    "genre": "Adventure",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BOTJiNDEzOWYtMTVjOC00ZjlmLWE0NGMtZmE1OWVmZDQ2OWJhXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "rating": 8.3,
+    "description": "In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders by a group of Jewish U.S. soldiers coincides with a theatre owner's vengeful plans for the same."
+  },
+  {
+    "movieName": "silence_of_the_lambs",
+    "movieTitle": "The Silence of the Lambs",
+    "actors": ["Jodie Foster", "Anthony Hopkins", "Scott Glenn"],
+    "genre": "Thriller",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+    "rating": 8.6,
+    "description": "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims."
+  },
+  {
+    "movieName": "saving_private_ryan",
+    "movieTitle": "Saving Private Ryan",
+    "actors": ["Tom Hanks", "Matt Damon", "Tom Sizemore"],
+    "genre": "War",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BZjhkMDM4MWItZTVjOC00ZDRhLThmYTAtM2I5NzBmNmNlMzI1XkEyXkFqcGdeQXVyNDYyMDk5MTU@._V1_QL75_UY562_CR1,0,380,562_.jpg",
+    "rating": 8.6,
+    "description": "Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines to retrieve a paratrooper whose brothers have been killed in action."
+  },
+  {
+    "movieName": "green_mile",
+    "movieTitle": "The Green Mile",
+    "actors": ["Tom Hanks", "Michael Clarke Duncan", "David Morse"],
+    "genre": "Crime",
+    "link": "iamdevraj.me",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTUxMzQyNjA5MF5BMl5BanBnXkFtZTYwOTU2NTY3._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "rating": 8.6,
+    "description": "The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift."
+  },
+  {
+    "movieName": "prestige",
+    "movieTitle": "The Prestige",
+    "link": "iamdevraj.me",
+    "actors": ["Christian Bale", "Hugh Jackman", "Scarlett Johansson"],
+    "genre": "Mystery",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMjA4NDI0MTIxNF5BMl5BanBnXkFtZTYwNTM0MzY2._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "rating": 8.5,
+    "description": "After a tragic accident, two stage magicians engage in a battle to create the ultimate illusion while sacrificing everything they have to outwit each other."
+  },
+  {
+    "movieName": "departed",
+    "movieTitle": "The Departed",
+    "link": "iamdevraj.me",
+    "actors": ["Leonardo DiCaprio", "Matt Damon", "Jack Nicholson"],
+    "genre": "Crime",
+    "imageUrl": "https://m.media-amazon.com/images/M/MV5BMTI1MTY2OTIxNV5BMl5BanBnXkFtZTYwNjQ4NjY3._V1_QL75_UY562_CR0,0,380,562_.jpg",
+    "rating": 8.5,
+    "description": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston."
+  }
+]
