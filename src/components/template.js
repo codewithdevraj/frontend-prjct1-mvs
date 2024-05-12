@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import "../App.css"; // Assuming your CSS file is named App.css
 
 const Navbar = () => {
@@ -8,11 +9,16 @@ const Navbar = () => {
   const handleNavToggle = () => {
     setTimeout(() => {
       setIsNavOpen(!isNavOpen);
+      const hamburger = document.getElementById("hamburger");
+      hamburger.children[0].classList.toggle("rotate1");
+      hamburger.children[1].classList.toggle("hide");
+      hamburger.children[2].classList.toggle("rotate2");
     }, 300);
   };
   const login = () => {
     alert('login');
   }
+
 
   const handleUserMenuToggle = () => {
     setIsUserMenuOpen(!isUserMenuOpen);
@@ -58,8 +64,15 @@ const Navbar = () => {
 };
 
 const Sidebar = () => {
+  const [issideOpen, setIssideOpen] = useState(false);
+  const handlesidebartogle = () => {
+    setIssideOpen(!issideOpen);
+    const i = document.querySelector("aside i");
+    i.classList.toggle("rotate");
+  }
+
   return (
-    <aside>
+    <aside className={`${issideOpen ? "show" : ""}`}>
       <div className="atp">
         <img src="/hero-egame.jpg" alt="" />
         <h5>Get all movies here</h5>
@@ -115,9 +128,265 @@ const Sidebar = () => {
         <p>Get all movies here</p>
         <p>Made with love &hearts; by Devraj</p>
       </div>
+      <button onClick={handlesidebartogle}>
+        <i className="fas fa-caret-down"></i>
+      </button>
     </aside>
   );
 };
 
+const Homepage = () => {
+  const setupslider = () => {
+   var sliderContainer = document.getElementById("slidercontainer");
+   var slider = document.getElementById("slider");
+   var main = document.querySelector("main");
 
-export { Navbar, Sidebar };
+   // Clone first and last images
+   var firstSlide = sliderContainer.querySelector(".slide:first-child");
+   var lastSlide = sliderContainer.querySelector(".slide:last-child");
+   var clonedFirstSlide = firstSlide.cloneNode(true);
+   slider.appendChild(clonedFirstSlide);
+   var clonedLastSlide = lastSlide.cloneNode(true);
+   slider.insertBefore(
+     clonedLastSlide,
+     slider.querySelector(".slide:first-child")
+   );
+
+   // Handle scroll event
+   slider.addEventListener("scroll", function () {
+     var scrollPos = slider.scrollLeft;
+     var slideWidth = slider.querySelector(".slide").offsetWidth;
+     var slides = slider.querySelectorAll(".slide");
+     var totalWidth = Array.from(slides).reduce(function (acc, slide) {
+       return acc + slide.offsetWidth;
+     }, 0);
+     var mainPaddingLeft = parseFloat(
+       window.getComputedStyle(main).paddingLeft
+     );
+     var mainPaddingRight = parseFloat(
+       window.getComputedStyle(main).paddingRight
+     );
+     var adjustedScrollPos = scrollPos - mainPaddingLeft;
+     if (adjustedScrollPos <= 0) {
+       slider.scrollLeft = (slides.length - 2) * slideWidth + mainPaddingLeft;
+     } else if (
+       adjustedScrollPos + slider.offsetWidth >=
+       totalWidth - mainPaddingRight
+     ) {
+       slider.scrollLeft = slideWidth + mainPaddingLeft;
+     }
+   });
+
+   // Center second card on reload
+   var sliderWidth = slider.offsetWidth;
+   var slideWidth = slider.querySelector(".slide").offsetWidth;
+   var scrollPosition = slideWidth;
+   var marginLeft = (sliderWidth - slideWidth) / 2;
+   scrollPosition -= marginLeft;
+   setTimeout(function () {
+     slider.scrollLeft = scrollPosition;
+   }, 10);
+  }
+  useEffect(() => {
+    setupslider();
+  }, []);
+  return (
+    <div>
+      <div className="hero">
+        <div className="hblr">
+          <div className="hblrcnt">
+            <h1>
+              <span>Movie</span> Mania
+            </h1>
+            <p>Get all movies here</p>
+          </div>
+          <div className="hbbtn">
+            <a href="movies">Browse</a>
+            <a href="tv-shows">Search</a>
+          </div>
+        </div>
+      </div>
+      <div className="mcard-cont">
+        <div className="mdata">
+          <h2>Popular Movies</h2>
+        </div>
+        <div className="mcards">
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard">
+            <img
+              src="https://vegamovies.yt/wp-content/uploads/2024/02/The-Marvels-Vegamovies-Poster-I-Max.jpg"
+              alt=""
+            />
+            <div className="mcard-info">
+              <h3>Movie Name</h3>
+              <a href="movie">Watch Now</a>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+                quod, voluptates, quae, quos
+              </p>
+              <h5>Rating: 4 ★★★★</h5>
+            </div>
+          </div>
+          <div className="mcard2">
+            <div className="mcard2-info">
+              <a href="movie">Watch more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="slider-container" id="slidercontainer">
+        <div className="slider" id="slider">
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/983/1000/HD-wallpaper-the-jungle-book-movie-poster.jpg"
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/475/959/HD-wallpaper-venom-movie-2018-official-poster-venom-movie-venom-movies-2018-movies-poster.jpg"
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/246/232/HD-wallpaper-spiderman-no-way-home-movie-poster-spider-man-no-way-home-spiderman-2021-movies-movies-poster-artstation.jpg"
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/31/267/HD-wallpaper-rampage-8k-poster-rampage-dwayne-johnson-2018-movies-movies-poster.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+
+export {
+  Navbar, Sidebar, Homepage
+  
+ };

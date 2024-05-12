@@ -23,7 +23,7 @@ function pagesetup() {
   );
 }
 pagesetup();
-const main = ReactDOM.createRoot(document.getElementById('main'));
+const main = ReactDOM.createRoot(document.querySelector('main'));
 main.render(
   <React.StrictMode>
     <App />
