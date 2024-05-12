@@ -141,7 +141,6 @@ const Homepage = () => {
     var sliderContainer = document.getElementById("slidercontainer");
     var slider = document.getElementById("slider");
     var main = document.querySelector("main");
-
     // Clone first and last images
     var firstSlide = sliderContainer.querySelector(".slide:first-child");
     var lastSlide = sliderContainer.querySelector(".slide:last-child");
@@ -152,7 +151,6 @@ const Homepage = () => {
       clonedLastSlide,
       slider.querySelector(".slide:first-child")
     );
-
     // Handle scroll event
     slider.addEventListener("scroll", function () {
       var scrollPos = slider.scrollLeft;
@@ -177,7 +175,6 @@ const Homepage = () => {
         slider.scrollLeft = slideWidth + mainPaddingLeft;
       }
     });
-
     // Center second card on reload
     var sliderWidth = slider.offsetWidth;
     var slideWidth = slider.querySelector(".slide").offsetWidth;
@@ -188,9 +185,11 @@ const Homepage = () => {
       slider.scrollLeft = scrollPosition;
     }, 10);
   };
+
   useEffect(() => {
     setupslider();
   }, []);
+
   return (
     <div>
       <div className="hero">
