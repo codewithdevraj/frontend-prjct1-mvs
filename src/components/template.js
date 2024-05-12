@@ -207,6 +207,34 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      <div className="slider-container" id="slidercontainer">
+        <div className="slider" id="slider">
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/983/1000/HD-wallpaper-the-jungle-book-movie-poster.jpg"
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/475/959/HD-wallpaper-venom-movie-2018-official-poster-venom-movie-venom-movies-2018-movies-poster.jpg"
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/246/232/HD-wallpaper-spiderman-no-way-home-movie-poster-spider-man-no-way-home-spiderman-2021-movies-movies-poster-artstation.jpg"
+              alt=""
+            />
+          </div>
+          <div className="slide">
+            <img
+              src="https://w0.peakpx.com/wallpaper/31/267/HD-wallpaper-rampage-8k-poster-rampage-dwayne-johnson-2018-movies-movies-poster.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
       <div className="mcard-cont">
         <div className="mdata">
           <h2>Popular Movies</h2>
@@ -237,34 +265,6 @@ const Homepage = () => {
             <div className="mcard2-info">
               <a href="movie">Watch more</a>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="slider-container" id="slidercontainer">
-        <div className="slider" id="slider">
-          <div className="slide">
-            <img
-              src="https://w0.peakpx.com/wallpaper/983/1000/HD-wallpaper-the-jungle-book-movie-poster.jpg"
-              alt=""
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://w0.peakpx.com/wallpaper/475/959/HD-wallpaper-venom-movie-2018-official-poster-venom-movie-venom-movies-2018-movies-poster.jpg"
-              alt=""
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://w0.peakpx.com/wallpaper/246/232/HD-wallpaper-spiderman-no-way-home-movie-poster-spider-man-no-way-home-spiderman-2021-movies-movies-poster-artstation.jpg"
-              alt=""
-            />
-          </div>
-          <div className="slide">
-            <img
-              src="https://w0.peakpx.com/wallpaper/31/267/HD-wallpaper-rampage-8k-poster-rampage-dwayne-johnson-2018-movies-movies-poster.jpg"
-              alt=""
-            />
           </div>
         </div>
       </div>
