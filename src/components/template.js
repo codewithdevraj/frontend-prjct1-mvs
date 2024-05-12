@@ -132,7 +132,7 @@ const Homepage = () => {
       var slides = slider.querySelectorAll(".slide");
       var totalWidth = Array.from(slides).reduce(function (acc, slide) {
         return acc + slide.offsetWidth;
-      });
+      }, 0);
       var mainPaddingLeft = parseFloat(
         window.getComputedStyle(main).paddingLeft
       );
