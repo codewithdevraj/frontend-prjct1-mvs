@@ -430,8 +430,71 @@ const Homepage = () => {
           </div> */}
         </div>
       </div>
+      <div className="aboutus">
+        <h2>About Us</h2>
+        <p>
+          Welcome to <span>Movie Mania</span>, where passion for cinema meets
+          the thrill of entertainment! I'm <span>Devraj</span>, the cinephile
+          extraordinaire behind this cinematic wonderland. From the silver
+          screen to the digital realm, I live and breathe movies, TV series, and{" "}
+          <span>web series</span>, embracing the mesmerizing world of
+          storytelling.
+        </p>
+        <br />
+
+        <p>
+          At <span>Movie Mania</span>, we're not just another film hub; we're
+          your ultimate destination for reviews that sizzle,{" "}
+          <span>spoilers</span> that ignite your curiosity, and{" "}
+          <span>download</span> options that let you dive deep into the heart of
+          cinematic brilliance. Whether you're craving the latest
+          <span>blockbuster buzz</span> or seeking hidden gems waiting to be
+          discovered, we've got you covered.
+        </p>
+        <br />
+        <p>
+          Join me on this electrifying journey through the realms of
+          <span>imagination</span> and <span>excitement</span>. Let's explore,
+          discuss, and celebrate the magic of movies together at{" "}
+          <span>Movie Mania</span>, where every frame tells a story, and every
+          click unlocks a world of infinite possibilities. Get ready to unleash
+          your inner movie maven and embark on an
+          <span>adventure like no other</span>!
+        </p>
+        <br />
+        <p>
+          Lights, camera, action – let the <span>Movie Mania</span> begin!
+        </p>
+      </div>
     </div>
   );
 };
 
-export { Navbar, Sidebar, Homepage, Footer };
+const Page404 = () => {
+  return (
+    <section className="page_404">
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-12">
+            <div className="col-sm-10 col-sm-offset-1 text-center">
+              <div className="four_zero_four_bg">
+                <h1 className="text-center">404</h1>
+              </div>
+              <div className="contant_box_404">
+                <h3 className="h2">Look like you're lost</h3>
+                <p>The page you are looking for is not available!</p>
+                <a href="/" className="link_404">
+                  Go to Home
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export {
+  Navbar, Sidebar, Homepage, Footer, Page404
+ };

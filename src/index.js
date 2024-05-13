@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
-import { Navbar, Sidebar, Footer } from "./components/template";
+import { Navbar, Sidebar, Footer, } from "./components/template";
 
 
 function pagesetup() {
