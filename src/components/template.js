@@ -39,10 +39,17 @@ const Navbar = () => {
         <h1>Movie Mania</h1>
       </div>
       <div className={`navlinks ${isNavOpen ? "show" : ""}`}>
-        <a href="/homepage">Home</a>
+        {data.navlinks.map((nl, i) => {
+          return (
+            <a href={nl.url} key={i}>
+              {nl.name}
+            </a>
+          );
+        })}
+        {/* <a href="/homepage">Home</a>
         <a href="/movies">Movies</a>
         <a href="/tv-shows">TV Shows</a>
-        <a href="/about">About</a>
+        <a href="/about">About</a> */}
       </div>
       <div className="usersmenu" id="usersmenu">
         <a href="signup" id="signup">
@@ -361,6 +368,66 @@ const Homepage = () => {
               <a href="movie">Watch more</a>
             </div>
           </div>
+        </div>
+      </div>
+      <div className="featured">
+        <h2>
+          <span>Featured</span> Movies
+        </h2>
+        <div className="features">
+          {data.movies
+            .filter((f) =>
+              Object.values(f).some(
+                (value) =>
+                  typeof value === "string" &&
+                  value.toLowerCase().includes("featured")
+              )
+            )
+            .slice(0, 4)
+            .map((f, i) => (
+              <div key={i} className="feature">
+                <img src={f.imageUrl} alt="" />
+                <h3>{f.movieTitle}</h3>
+                <p>{f.description}</p>
+                <a href={f.link}>Watch Now</a>
+              </div>
+            ))}
+          {/* <div className="feature">
+            <img src="/peakpx.jpg" alt="" />
+            <h3>Movie Name</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              quod, voluptates, quae, quos lo
+            </p>
+            <a href="movie">Watch Now</a>
+          </div>
+          <div className="feature">
+            <img src="/peakpx (1).jpg" alt="" />
+            <h3>Movie Name</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              quod, voluptates, quae, quos
+            </p>
+            <a href="movie">Watch Now</a>
+          </div>
+          <div className="feature">
+            <img src="/peakpx (1).jpg" alt="" />
+            <h3>Movie Name</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              quod, voluptates, quae, quos
+            </p>
+            <a href="movie">Watch Now</a>
+          </div>
+          <div className="feature">
+            <img src="/peakpx (1).jpg" alt="" />
+            <h3>Movie Name</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              quod, voluptates, quae, quos
+            </p>
+            <a href="movie">Watch Now</a>
+          </div> */}
         </div>
       </div>
     </div>
