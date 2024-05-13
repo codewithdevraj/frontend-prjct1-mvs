@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import App from './App';
 
-import { Navbar, Sidebar } from "./components/template";
+import { Navbar, Sidebar, Footer } from "./components/template";
 
 
 function pagesetup() {
@@ -19,6 +19,13 @@ function pagesetup() {
   sidebar.render(
     <React.StrictMode>
       <Sidebar />
+    </React.StrictMode>
+  );
+
+  const footer = ReactDOM.createRoot(document.getElementById("footer"));
+  footer.render(
+    <React.StrictMode>
+      <Footer />
     </React.StrictMode>
   );
 }
