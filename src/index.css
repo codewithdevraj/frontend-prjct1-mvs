@@ -240,7 +240,6 @@ aside {
     background-color: rgb(185, 180, 185);
     border-radius: 10px;
     box-shadow: -2px 2px 2px rgb(66, 63, 63);
-
   }
   .alinks {
     a {
@@ -281,12 +280,11 @@ hr {
 }
 
 @media screen and (max-width: 900px) {
-  .nav{
+  .nav {
     padding: 0.3rem 0;
-    img{
+    img {
       width: 40px !important;
       height: 40px !important;
-    
     }
   }
   aside {
@@ -309,7 +307,7 @@ hr {
       max-width: 200px;
       margin: 0 auto;
       /* firstchild */
-      &:first-child{
+      &:first-child {
         background-color: transparent;
         box-shadow: none;
         font-size: 1.6rem;
@@ -344,5 +342,150 @@ hr {
   }
   main {
     padding: 0 0 0 0;
+  }
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 8px;
+  }
+}
+footer {
+  background: linear-gradient(black 5%, transparent, rgb(164, 12, 53));
+  border-top: 2px solid var(--secondary-color);
+  padding: 20px 20px 20px 220px;
+  display: flex;
+  justify-content: center;
+  * {
+    color: aliceblue;
+  }
+}
+.f-cont {
+  width: 1200px;
+}
+.ftop {
+  padding: 30px 0;
+  margin: 10px;
+  border-bottom: 1px solid rgb(187, 180, 180);
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+    h2 {
+      font-size: clamp(0.9rem, 0.9rem + 1.4205vw, 1.875rem);
+      color: var(--tertiary-color);
+      span {
+        color: var(--secondary-color);
+        font-size: clamp(0.6rem, 0.5rem + 1.4205vw, 1.875rem);
+      }
+    }
+    .form-cont {
+      display: flex;
+      input {
+        width: clamp(200px, 30vw, 400px);
+        height: 40px;
+        padding: 8px;
+        margin: 5px;
+        border-radius: 10px;
+        background-color: transparent;
+        color: aliceblue;
+        border: 1px solid rgb(187, 180, 180);
+      }
+      button {
+        padding: 8px;
+        max-width: 100px;
+        border-radius: 20%;
+        margin: 0 auto;
+        margin: 5px;
+        color: aliceblue;
+        background-color: rgb(5, 5, 56);
+        outline: none;
+        border: 1px solid rgb(187, 180, 180);
+        &:hover {
+          background-color: rgb(4, 46, 94);
+        }
+      }
+    }
+  }
+}
+.fbtm {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  text-align: center;
+  padding: 40px 0;
+  margin: 10px;
+  border-bottom: 1px solid rgb(187, 180, 180);
+  > li {
+    min-width: 140px;
+    > ul > li {
+      a {
+        border-radius: 20px;
+        padding: 5px 25px;
+        color: rgb(187, 180, 180);
+        &:hover {
+          background-color: rgb(4, 46, 94);
+          color: aliceblue;
+        }
+      }
+    }
+  }
+}
+.fabout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  .fab1 {
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+    align-items: center;
+    > img {
+      width: 90px;
+      border-radius: 20px;
+    }
+    h3 {
+      font-size: clamp(0.9375rem, 0.7955rem + 0.7102vw, 1.25rem);
+      margin: 5px;
+      padding: 0;
+    }
+  }
+  .fab2,
+  .fab3 {
+    display: flex;
+    margin: 10px;
+    img {
+      width: 40px;
+      margin: 0 8px;
+      border-radius: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  form,
+  .form-cont {
+    flex-direction: column;
+    align-items: center;
+  }
+  .fbtm > li {
+    width: 25%;
+  }
+}
+@media screen and (max-width: 440px) {
+  .fbtm > li {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    padding: 20px;
   }
 }

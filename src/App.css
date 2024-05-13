@@ -194,9 +194,11 @@
 
 .slider-container {
   margin: clamp(30px, 8vw, 85px) 0;
+  padding: 20px 0;
   height: auto;
   width: 100%;
-  aspect-ratio: 25/9;
+  aspect-ratio: 25/11;
+  background: linear-gradient(90deg, var(--tertiary-color) -40%, transparent , var(--tertiary-color) 140%);
   h2 {
     margin-bottom: 1.5rem;
     font-size: clamp(1.5rem, 0.5909rem + 4.5455vw, 3.5rem);
@@ -233,7 +235,14 @@
   }
 }
 @media screen and (max-width: 400px) {
-  .slider {
+  .slider-container{
+    aspect-ratio: 25/16;
+    .slider {
     gap: 30px !important;
+    
+    .slide{
+      padding: 2px !important;
+    }
+  }
   }
 }
