@@ -24,7 +24,11 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background-color: var(--main-color);
+  background-image: url("https://w0.peakpx.com/wallpaper/141/120/HD-wallpaper-galaxy-black-black-deep-galaxy-night-sky-space-star-stars-ultra.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 button {
   outline: none;
@@ -168,7 +172,6 @@ button {
 
 main {
   padding: 100px 10px 20px 220px;
-  background: linear-gradient(rgb(35, 1, 29), rgb(44, 1, 2));
 }
 
 @media screen and (max-width: 900px) {
@@ -222,6 +225,7 @@ aside {
   left: 0;
   width: 200px;
   height: 100vh;
+  background-color: #49081eef;
   border: 1px solid var(--secondary-color);
   .atp {
     text-align: center;
