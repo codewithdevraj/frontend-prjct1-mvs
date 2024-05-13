@@ -414,26 +414,37 @@ footer {
 }
 .fbtm {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
   gap: 40px;
   justify-items: center;
   text-align: center;
   padding: 40px 0;
   margin: 10px;
   border-bottom: 1px solid rgb(187, 180, 180);
-  > li {
-    min-width: 140px;
-    > ul > li {
-      a {
-        border-radius: 20px;
-        padding: 5px 25px;
-        color: rgb(187, 180, 180);
-        &:hover {
-          background-color: rgb(4, 46, 94);
-          color: aliceblue;
-        }
-      }
+  ul{
+    background:linear-gradient(transparent 30%, rgba(24, 24, 24, 0.745));
+    padding: 10px;
+    border-radius: 20px;
+    border-top: 2px solid aqua;
+    border-bottom: 5px solid aqua;
+    h2{
+      font-size: clamp(0.9rem, 0.9rem + 1.4205vw, 1.875rem);
+      color: var(--tertiary-color);
     }
+  }
+   li {
+    a{
+      display: block;
+        min-width: 120px;
+        color: aliceblue;
+        padding: 8px 0;
+        &:hover {
+          color: var(--tertiary-color);
+          background-color: var(--secondary-color);
+          border-radius: 50px;
+          box-shadow: -4px 4px 2px black;
+      }
+      }
   }
 }
 .fabout {
