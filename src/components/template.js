@@ -578,7 +578,7 @@ const MovieContent = () => {
             {m.overview}
           </p>
           <div className="mvbtn">
-            <a href="p/id">Watch Now</a>
+            <a href={m.homepage}>Watch Now</a>
             <a href="d/id">Download</a>
           </div>
         </div>

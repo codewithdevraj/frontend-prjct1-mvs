@@ -429,7 +429,7 @@
     z-index: 20;
     left: 35%;
     bottom: 20%;
-    padding: 50px 20px;
+    padding: 50px 20px 0 20px;
     /* background:linear-gradient(90deg, transparent, var(--tertiary-color) 150%); */
     h2 {
       font-size: clamp(1rem, 0.6364rem + 1.8182vw, 1.8rem);
@@ -471,17 +471,20 @@
 @media screen and (max-width: 720px) {
   .mvcnt {
     .mvimage {
-      left: 10%;
-      bottom: 45%;
+      position: relative;
+      left: 25%;
+      top: -80%;
       padding: 2px;
       border-radius: 10px;
       img {
         border-radius: 8px;
       }
     }
+
     .mvinfo {
       left: 0;
       bottom: 10%;
+      padding: 0 20px;
     }
   }
 }
