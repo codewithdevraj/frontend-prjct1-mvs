@@ -555,7 +555,9 @@ const MovieContent = () => {
     };
 
     fetchData();
-  }, []);
+  }, [
+    name,
+  ]);
   console.log(m);
   return (
     <div className="mvmncnt">

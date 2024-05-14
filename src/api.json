@@ -212,15 +212,15 @@
     },
     {
       "name": "movies",
-      "url": "movies"
+      "url": "/movies"
     },
     {
       "name": "Tv Shows",
-      "url": "tvshow"
+      "url": "/tvshow"
     },
     {
       "name": "About",
-      "url": "about"
+      "url": "/about"
     }
   ],
   "footer": [
