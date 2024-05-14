@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../api.json";
+import { useParams } from "react-router-dom";
 
 import "../App.css"; // Assuming your CSS file is named App.css
 
@@ -153,7 +154,7 @@ const Footer = () => {
                   );
                 })}
               </ul>
-            )
+            );
           })}
         </div>
         <div className="fabout" id="fabout">
@@ -169,7 +170,7 @@ const Footer = () => {
               </h3>
               <h5>
                 Phone:{" "}
-                <a href={`tel:${ data.admin.phone}`}>{data.admin.phone}</a>
+                <a href={`tel:${data.admin.phone}`}>{data.admin.phone}</a>
                 <br />
                 Email:{" "}
                 <a href={`mailto:${data.admin.email}`}>{data.admin.email}</a>
@@ -343,17 +344,21 @@ const Homepage = () => {
             .filter((m) => m.rating > 8.5)
             .slice(0, 12)
             .map((m, i) => (
-              <Link key={i} to={m.link} className="mcard-link">
+              <Link
+                key={i}
+                to={`mymovies/${m.movieName}`}
+                className="mcard-link"
+              >
                 <div className="mcard">
                   <img src={m.imageUrl} alt="" />
                   <div className="mcard-info">
                     <div>
                       <h3>{m.movieTitle}</h3>
-                      <a href={m.link}>
+                      <a href={`mymovies/${m.movieName}`}>
                         Watch
                         <br />
                         Now
-                      </a>{" "}
+                      </a>
                       {/* Link added here */}
                       <p>{m.description}</p>
                       <h5>Rating: {m.rating} ★★★★★</h5>
@@ -365,7 +370,7 @@ const Homepage = () => {
 
           <div className="mcard2">
             <div className="mcard2-info">
-              <a href="movie">Watch more</a>
+              <a href="movies">Watch more</a>
             </div>
           </div>
         </div>
@@ -495,6 +500,161 @@ const Page404 = () => {
   );
 };
 
+const Mymoviecontent = () => {
+  let { name } = useParams();
+  let movie = data.movies.find((m) => m.movieName === name);
+  return (
+    <div className="mvmncnt">
+      <div className="mvcnt">
+        <img src={movie.imageUrl} alt="" />
+        <div className="mvblr"></div>
+        <div className="mvimage">
+          <img src={movie.imageUrl} alt="" />
+        </div>
+        <div className="mvinfo">
+          <h2>{movie.movieTitle}</h2>
+          <p>
+            <span>Rating:</span> {movie.rating}
+          </p>
+          <p>
+            <span>Genre:</span> {movie.genre}
+          </p>
+          <p>{movie.description}</p>
+          <div className="mvbtn">
+            <a href="p/id">Watch Now</a>
+            <a href="d/id">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+const MovieContent = () => {
+  let { name } = useParams();
+  const [m, setMovie] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const url = `https://api.themoviedb.org/3/movie/${name}?language=en-US`;
+      const options = {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTEzNzFkYjZlNDdlMDNjNTNjNWUxNDY0ZDE3MjQzYSIsInN1YiI6IjY2NDMxNDc5YjFmM2EzMTUzYTk2MTRmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UlzDdKnvRQ_g2FCNjqlNGRRzclT8g-SOfoA2dtYPH6Y",
+        },
+      };
+
+      try {
+        const res = await fetch(url, options);
+        const json = await res.json();
+        setMovie(json);
+      } catch (err) {
+        console.error("Error fetching movies:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
+  console.log(m);
+  return (
+    <div className="mvmncnt">
+      <div className="mvcnt">
+        <img src={`https://image.tmdb.org/t/p/w500${m.backdrop_path}`} alt="" />
+
+        <div className="mvblr"></div>
+        <div className="mvimage">
+          <img src={`https://image.tmdb.org/t/p/w500${m.poster_path}`} alt="" />
+        </div>
+        <div className="mvinfo">
+          <h2>{m.title}</h2>
+          <p>
+            <span>Rating:</span> {m.vote_average}
+          </p>
+          <p>
+            <span>Genre:</span>{" "}
+            {m.genres?.map((genre) => genre.name).join(", ")} <br />
+            <br />
+            {m.overview}
+          </p>
+          <div className="mvbtn">
+            <a href="p/id">Watch Now</a>
+            <a href="d/id">Download</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const Movies = () => {
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const url =
+        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+      const options = {
+        method: "GET",
+        headers: {
+          accept: "application/json",
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTEzNzFkYjZlNDdlMDNjNTNjNWUxNDY0ZDE3MjQzYSIsInN1YiI6IjY2NDMxNDc5YjFmM2EzMTUzYTk2MTRmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UlzDdKnvRQ_g2FCNjqlNGRRzclT8g-SOfoA2dtYPH6Y",
+        },
+      };
+
+      try {
+        const res = await fetch(url, options);
+        const json = await res.json();
+        console.log(json);
+        setMovies(json.results);
+      } catch (err) {
+        console.error("Error fetching movies:", err);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div className="mcard-cont">
+      <div className="mdata">
+        <h2>
+          <span>Now</span> Showing
+        </h2>
+        <p>Latest movies in theatres</p>
+      </div>
+      <div className="mcards">
+        {movies.map((m, i) => (
+          <Link key={i} to={`${m.id}`} className="mcard-link">
+            <div key={i} className="mcard">
+              <img
+                src={`https://image.tmdb.org/t/p/w500${m.poster_path}`}
+                alt=""
+              />
+              <div className="mcard-info">
+                <div>
+                  <h3>{m.title}</h3>
+                  <a href={`movies/${m.id}`}>Watch Now</a>
+                  <p>{m.overview}</p>
+                  <h5>Rating: {m.vote_average} ★★★★★</h5>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export {
-  Navbar, Sidebar, Homepage, Footer, Page404
- };
+  Navbar,
+  Sidebar,
+  Homepage,
+  Footer,
+  Page404,
+  MovieContent,
+  Movies,
+  Mymoviecontent,
+};
