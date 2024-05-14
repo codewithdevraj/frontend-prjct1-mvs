@@ -121,6 +121,10 @@
         p {
           font-size: 0.6rem;
           margin: 5px 0;
+          max-height: 50px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 100%;
         }
         a {
           display: grid;
@@ -374,4 +378,113 @@
 }
 .contant_box_404 {
   margin-top: -50px;
+}
+
+.mvmncnt {
+  position: relative;
+  min-height: 90vh;
+  background-color: black;
+}
+
+.mvcnt {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  height: clamp(300px, 50vw, 500px);
+  .mvblr {
+    position: absolute;
+    top: 0;
+    background: linear-gradient(
+      0deg,
+      black,
+      rgb(0, 0, 0) 50%,
+      rgba(0, 0, 0, 0)
+    );
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+  }
+  .mvimage {
+    position: absolute;
+    padding: 5px;
+    background: linear-gradient(red, blue);
+    border-radius: 20px;
+    z-index: 30;
+    height: auto;
+    bottom: 15%;
+    left: 8%;
+    aspect-ratio: 10/16;
+    width: clamp(150px, 20vw, 400px);
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+  .mvinfo {
+    position: absolute;
+    z-index: 20;
+    left: 35%;
+    bottom: 20%;
+    padding: 50px 20px 0 20px;
+    /* background:linear-gradient(90deg, transparent, var(--tertiary-color) 150%); */
+    h2 {
+      font-size: clamp(1rem, 0.6364rem + 1.8182vw, 1.8rem);
+      font-weight: 600;
+      color: var(--tertiary-color);
+    }
+    p {
+      font-size: clamp(0.5rem, 0.2727rem + 1.1364vw, 1rem);
+      margin: 1rem 0;
+      font-weight: 400;
+    }
+    .mvbtn {
+      a {
+        font-size: clamp(0.5rem, 0.2727rem + 1.1364vw, 1rem);
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+
+        font-weight: 900;
+        border: 2px solid var(--secondary-color);
+        background-color: var(--secondary-color);
+        color: var(--tertiary-color);
+        border-radius: 12%;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        &:first-child {
+          margin-right: 1rem;
+          border: 1px solid rgb(4, 39, 48);
+          background-color: var(--tertiary-color);
+          color: var(--secondary-color);
+        }
+        &:hover {
+          box-shadow: -2px 2px 2px rgb(0, 255, 242);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .mvcnt {
+    .mvimage {
+      position: relative;
+      left: 25%;
+      top: -80%;
+      padding: 2px;
+      border-radius: 10px;
+      img {
+        border-radius: 8px;
+      }
+    }
+
+    .mvinfo {
+      left: 0;
+      bottom: 10%;
+      padding: 0 20px;
+    }
+  }
 }
