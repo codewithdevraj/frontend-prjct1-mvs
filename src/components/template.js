@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import data from "../api.json";
 import { useParams } from "react-router-dom";
-
 import "../App.css"; // Assuming your CSS file is named App.css
+const authToke = process.env.AUTH_TOKEN;
 
 const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -532,7 +532,7 @@ const Mymoviecontent = () => {
 const MovieContent = () => {
   let { name } = useParams();
   const [m, setMovie] = useState([]);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       const url = `https://api.themoviedb.org/3/movie/${name}?language=en-US`;
@@ -541,7 +541,7 @@ const MovieContent = () => {
         headers: {
           accept: "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTEzNzFkYjZlNDdlMDNjNTNjNWUxNDY0ZDE3MjQzYSIsInN1YiI6IjY2NDMxNDc5YjFmM2EzMTUzYTk2MTRmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UlzDdKnvRQ_g2FCNjqlNGRRzclT8g-SOfoA2dtYPH6Y",
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YjljMTE4MTE2ZTJmYTEzMmNiNWY4ZWYxYjIyM2EyYiIsInN1YiI6IjY2NDMxNDc5YjFmM2EzMTUzYTk2MTRmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-KPTrjofXLy24IRgJ_ad8pDCwqMhI1uCf2KM0N1Vsu0",
         },
       };
 
@@ -595,13 +595,13 @@ const Movies = () => {
   useEffect(() => {
     const fetchData = async () => {
       const url =
-        "https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1";
+        "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1";
       const options = {
         method: "GET",
         headers: {
           accept: "application/json",
           Authorization:
-            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNTEzNzFkYjZlNDdlMDNjNTNjNWUxNDY0ZDE3MjQzYSIsInN1YiI6IjY2NDMxNDc5YjFmM2EzMTUzYTk2MTRmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UlzDdKnvRQ_g2FCNjqlNGRRzclT8g-SOfoA2dtYPH6Y",
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YjljMTE4MTE2ZTJmYTEzMmNiNWY4ZWYxYjIyM2EyYiIsInN1YiI6IjY2NDMxNDc5YjFmM2EzMTUzYTk2MTRmMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.-KPTrjofXLy24IRgJ_ad8pDCwqMhI1uCf2KM0N1Vsu0",
         },
       };
 
